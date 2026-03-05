@@ -131,8 +131,8 @@ const About = () => {
                 To become India's leading platform for apartment-based children's activities, present in every major city, transforming how children learn and grow.
               </p>
             </motion.div>
-          
-        
+          </div>
+        </div>
       </section>
 
       {/* Core Values */}
