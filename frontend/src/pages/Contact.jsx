@@ -281,9 +281,6 @@ const Contact = () => {
               <p className="body-standard text-secondary">Partner with us to activate your amenities</p>
               <Button className="btn-secondary mt-4">Learn More</Button>
             </motion.div>
-
-
-          </div>
         </div>
       </section>
     </>

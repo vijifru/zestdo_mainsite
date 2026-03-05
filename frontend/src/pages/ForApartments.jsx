@@ -69,8 +69,6 @@ const ForApartments = () => {
               Partner With Us
             </Button>
           </motion.div>
-
-          </div>
         </div>
       </section>
 
@@ -339,8 +337,6 @@ const ForApartments = () => {
               </Button>
 
           </motion.div>
-
-          </div>
         </div>
       </section>
     </>

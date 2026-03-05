@@ -65,8 +65,6 @@ const ForTrainers = () => {
               Apply as Trainer
             </Button>
           </motion.div>
-
-          </div>
         </div>
       </section>
 
@@ -252,8 +250,6 @@ const ForTrainers = () => {
               </Button>
 
           </motion.div>
-
-          </div>
         </div>
       </section>
     </>
