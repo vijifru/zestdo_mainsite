@@ -155,9 +155,9 @@ const ForApartments = () => {
               <h4 className="heading-medium text-center mb-4">Example Calculation</h4>
               <div className="calculation-grid">
                 <div className="calc-item">
-                  <div className="calc-number">50
-                  <div className="calc-label">Children Enrolled
-
+                  <div className="calc-number">50</div>
+                  <div className="calc-label">Children Enrolled</div>
+                </div>
                 <div className="calc-operator">×</div>
                 <div className="calc-item">
                   <div className="calc-number">₹999</div>
