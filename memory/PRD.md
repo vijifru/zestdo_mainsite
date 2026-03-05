@@ -341,5 +341,29 @@ Will be detailed once backend development begins. Expected endpoints:
 
 ---
 
+## Feature Addition: App Download Links (December 2025)
+
+### Added App Download Links ✅
+**Feature:** Added Android (Google Play) and iOS (App Store) download links for both Parent and Trainer apps throughout the site.
+
+**Implementation:**
+- **Footer:** New "Parent App" and "Trainer App" sections with store badges
+- **For Parents page:** Dedicated app download card with feature highlights
+- **For Trainers page:** Dedicated app download card with trainer-specific features
+- **New component:** `AppDownload.jsx` - Reusable component for app download sections
+
+**Links (Dummy - Ready for real URLs):**
+- Parent App Android: `https://play.google.com/store/apps/details?id=com.zestdo.parent`
+- Parent App iOS: `https://apps.apple.com/app/zestdo-parent/id123456789`
+- Trainer App Android: `https://play.google.com/store/apps/details?id=com.zestdo.trainer`
+- Trainer App iOS: `https://apps.apple.com/app/zestdo-trainer/id987654321`
+
+**Styling:** 
+- Orange theme for Parent app sections
+- Purple theme for Trainer app sections
+- Responsive design for all screen sizes
+
+---
+
 **Last Updated:** December 2025  
 **Status:** Phase 2 Complete - All Static Pages Working ✓
