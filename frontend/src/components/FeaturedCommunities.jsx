@@ -1,26 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'motion/react';
 import { MapPin, Users, TrendingUp } from 'lucide-react';
-import { getCommunities } from '../services/api';
+import { fetchCommunities } from '../store/slices/communitiesSlice';
 import { Button } from './ui/button';
 
 const FeaturedCommunities = () => {
-  const [communities, setCommunities] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const { items: communities, loading } = useSelector((state) => state.communities);
 
   useEffect(() => {
-    const fetchCommunities = async () => {
-      try {
-        const data = await getCommunities();
-        setCommunities(data);
-      } catch (error) {
-        console.error('Error fetching communities:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchCommunities();
-  }, []);
+    if (communities.length === 0) {
+      dispatch(fetchCommunities());
+    }
+  }, [dispatch, communities.length]);
 
   if (loading) {
     return (

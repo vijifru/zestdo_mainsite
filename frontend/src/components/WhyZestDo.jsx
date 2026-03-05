@@ -1,25 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'motion/react';
 import { X, Check } from 'lucide-react';
-import { getWhyZestDo } from '../services/api';
+import { fetchWhyZestDo } from '../store/slices/whyZestDoSlice';
 
 const WhyZestDo = () => {
-  const [whyZestDoPoints, setWhyZestDoPoints] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const { items: whyZestDoPoints, loading } = useSelector((state) => state.whyZestDo);
 
   useEffect(() => {
-    const fetchWhyZestDo = async () => {
-      try {
-        const data = await getWhyZestDo();
-        setWhyZestDoPoints(data);
-      } catch (error) {
-        console.error('Error fetching why ZestDo points:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchWhyZestDo();
-  }, []);
+    if (whyZestDoPoints.length === 0) {
+      dispatch(fetchWhyZestDo());
+    }
+  }, [dispatch, whyZestDoPoints.length]);
 
   if (loading) {
     return (

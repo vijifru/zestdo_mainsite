@@ -1,26 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'motion/react';
 import { Check, Star } from 'lucide-react';
-import { getSubscriptionPlans } from '../services/api';
+import { fetchPlans } from '../store/slices/plansSlice';
 import { Button } from './ui/button';
 
 const AppShowcase = () => {
-  const [subscriptionPlans, setSubscriptionPlans] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const { items: subscriptionPlans, loading } = useSelector((state) => state.plans);
 
   useEffect(() => {
-    const fetchPlans = async () => {
-      try {
-        const data = await getSubscriptionPlans();
-        setSubscriptionPlans(data);
-      } catch (error) {
-        console.error('Error fetching subscription plans:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchPlans();
-  }, []);
+    if (subscriptionPlans.length === 0) {
+      dispatch(fetchPlans());
+    }
+  }, [dispatch, subscriptionPlans.length]);
 
   if (loading) {
     return (
