@@ -158,25 +158,23 @@ const ForApartments = () => {
                   <div className="calc-number">50
                   <div className="calc-label">Children Enrolled
 
-                <div className="calc-operator">×
+                <div className="calc-operator">×</div>
                 <div className="calc-item">
-                  <div className="calc-number">₹999
-                  <div className="calc-label">Per Month Plan
-
-                <div className="calc-operator">×
+                  <div className="calc-number">₹999</div>
+                  <div className="calc-label">Per Month Plan</div>
+                </div>
+                <div className="calc-operator">×</div>
                 <div className="calc-item">
-                  <div className="calc-number">20%
-                  <div className="calc-label">Your Share
-
-                <div className="calc-operator">=
+                  <div className="calc-number">20%</div>
+                  <div className="calc-label">Your Share</div>
+                </div>
+                <div className="calc-operator">=</div>
                 <div className="calc-item highlight">
-                  <div className="calc-number">₹9,990
-                  <div className="calc-label">Monthly Revenue
-
-
+                  <div className="calc-number">₹9,990</div>
+                  <div className="calc-label">Monthly Revenue</div>
+                </div>
+              </div>
             </motion.div>
-
-
           </div>
         </div>
       </section>
