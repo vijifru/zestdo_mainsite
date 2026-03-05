@@ -475,5 +475,35 @@ Will be detailed once backend development begins. Expected endpoints:
 
 ---
 
+## Code Cleanup & Revenue Terms Update (December 2025)
+
+### Backend Simplified ✅
+**Current Structure:**
+```
+/app/backend/
+├── server.py      # All routes in single file (Express-style)
+├── data/
+│   └── mock.json  # JSON database
+└── .env
+```
+
+**Note:** Backend uses FastAPI (required by platform supervisor) but follows Express-style routing patterns in a single file for simplicity.
+
+### For Apartments Page - Revenue Terms Updated ✅
+Removed all specific revenue sharing percentages to keep pricing flexible:
+
+**Before:**
+- "Earn 20% revenue share from all classes"
+- "20% Apartment Revenue Share"
+- Specific calculation examples with percentages
+
+**After:**
+- "Earn recurring revenue from classes conducted in your premises"
+- "Revenue Sharing - Terms customized based on your community size and engagement"
+- Generic "Significant monthly additional revenue" in case study
+- New "Partnership Benefits" section with Flexible Terms card
+
+---
+
 **Last Updated:** December 2025  
-**Status:** Phase 3 Complete - Backend Restructured + Redux Integrated ✓
+**Status:** Phase 3 Complete - Clean Backend + Generic Revenue Terms ✓
