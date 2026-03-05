@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import Activities from "@/components/Activities";
 import WhyZestDo from "@/components/WhyZestDo";
+import FeaturedCommunities from "@/components/FeaturedCommunities";
 import AppShowcase from "@/components/AppShowcase";
 import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
@@ -19,6 +20,7 @@ function App() {
         <HowItWorks />
         <Activities />
         <WhyZestDo />
+        <FeaturedCommunities />
         <AppShowcase />
         <Testimonials />
         <CTASection />
