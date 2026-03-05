@@ -207,7 +207,7 @@ const ForTrainers = () => {
             transition={{ duration: 0.6 }}
             className="testimonial-highlight"
           >
-            <div className="testimonial-quote-large">"
+            <div className="testimonial-quote-large">"</div>
             <p className="body-large testimonial-text-large">
               Teaching through ZestDo has opened up amazing opportunities. I can now reach multiple apartment communities, manage my schedule easily, and the payment system is seamless. Best decision for my teaching career!
             </p>
@@ -215,15 +215,13 @@ const ForTrainers = () => {
               <div 
                 className="testimonial-author-avatar"
                 style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1603367563698-67012943fd67?w=100&h=100&fit=crop)' }}
-              >
+              ></div>
               <div>
                 <h4 className="body-large font-medium">Rajesh Kumar</h4>
                 <p className="body-standard text-secondary">Chess Coach, ZestDo Trainer</p>
-
-
+              </div>
+            </div>
           </motion.div>
-
-          </div>
         </div>
       </section>
 

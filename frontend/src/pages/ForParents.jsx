@@ -181,7 +181,7 @@ const ForParents = () => {
             transition={{ duration: 0.6 }}
             className="testimonial-highlight"
           >
-            <div className="testimonial-quote-large">"
+            <div className="testimonial-quote-large">"</div>
             <p className="body-large testimonial-text-large">
               ZestDo has been a game-changer for our family. My daughter now spends her evenings learning dance instead of watching YouTube. The convenience of classes in our own apartment is unbeatable!
             </p>
@@ -189,15 +189,13 @@ const ForParents = () => {
               <div 
                 className="testimonial-author-avatar"
                 style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1588979355313-6711a095465f?w=100&h=100&fit=crop)' }}
-              >
+              ></div>
               <div>
                 <h4 className="body-large font-medium">Priya Sharma</h4>
                 <p className="body-standard text-secondary">Parent, Prestige Lakeside</p>
-
-
+              </div>
+            </div>
           </motion.div>
-
-          </div>
         </div>
       </section>
 
