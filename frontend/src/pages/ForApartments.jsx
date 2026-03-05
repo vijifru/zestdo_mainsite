@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Building2, TrendingUp, Users, DollarSign, Award, Target } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
 
 const ForApartments = () => {
@@ -53,8 +51,7 @@ const ForApartments = () => {
   };
 
   return (
-    <div className="page-wrapper">
-      <Header />
+    
       
       {/* Hero Section */}
       <section className="page-hero apartments-hero">
@@ -73,7 +70,7 @@ const ForApartments = () => {
               Partner With Us
             </Button>
           </motion.div>
-        </div>
+        
       </section>
 
       {/* Benefits Section */}
@@ -106,14 +103,14 @@ const ForApartments = () => {
                 >
                   <div className="benefit-icon">
                     <IconComponent size={32} />
-                  </div>
+                  
                   <h3 className="heading-medium">{benefit.title}</h3>
                   <p className="body-standard text-secondary">{benefit.description}</p>
                 </motion.div>
               );
             })}
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* Revenue Model */}
@@ -157,28 +154,28 @@ const ForApartments = () => {
               <h4 className="heading-medium text-center mb-4">Example Calculation</h4>
               <div className="calculation-grid">
                 <div className="calc-item">
-                  <div className="calc-number">50</div>
-                  <div className="calc-label">Children Enrolled</div>
-                </div>
-                <div className="calc-operator">×</div>
+                  <div className="calc-number">50
+                  <div className="calc-label">Children Enrolled
+                
+                <div className="calc-operator">×
                 <div className="calc-item">
-                  <div className="calc-number">₹999</div>
-                  <div className="calc-label">Per Month Plan</div>
-                </div>
-                <div className="calc-operator">×</div>
+                  <div className="calc-number">₹999
+                  <div className="calc-label">Per Month Plan
+                
+                <div className="calc-operator">×
                 <div className="calc-item">
-                  <div className="calc-number">20%</div>
-                  <div className="calc-label">Your Share</div>
-                </div>
-                <div className="calc-operator">=</div>
+                  <div className="calc-number">20%
+                  <div className="calc-label">Your Share
+                
+                <div className="calc-operator">=
                 <div className="calc-item highlight">
-                  <div className="calc-number">₹9,990</div>
-                  <div className="calc-label">Monthly Revenue</div>
-                </div>
-              </div>
+                  <div className="calc-number">₹9,990
+                  <div className="calc-label">Monthly Revenue
+                
+              
             </motion.div>
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* Case Study */}
@@ -210,13 +207,13 @@ const ForApartments = () => {
                   src="https://images.unsplash.com/photo-1624204386084-dd8c05e32226?w=600&h=400&fit=crop" 
                   alt={caseStudy.name}
                 />
-              </div>
+              
               <div className="case-study-info">
                 <h3 className="heading-large">{caseStudy.name}</h3>
                 <p className="body-large text-secondary">{caseStudy.location}</p>
                 <p className="body-standard text-muted">{caseStudy.residents}</p>
-              </div>
-            </div>
+              
+            
             
             <div className="case-study-results">
               <h4 className="heading-medium mb-4">Results After 6 Months</h4>
@@ -234,10 +231,10 @@ const ForApartments = () => {
                     <span className="body-standard">{result}</span>
                   </motion.div>
                 ))}
-              </div>
-            </div>
+              
+            
           </motion.div>
-        </div>
+        
       </section>
 
       {/* How It Works */}
@@ -271,13 +268,13 @@ const ForApartments = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="step-card"
               >
-                <div className="step-number">{item.step}</div>
+                <div className="step-number">{item.step}
                 <h3 className="heading-medium">{item.title}</h3>
                 <p className="body-standard text-secondary">{item.desc}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* Testimonial */}
@@ -290,7 +287,7 @@ const ForApartments = () => {
             transition={{ duration: 0.6 }}
             className="testimonial-highlight"
           >
-            <div className="testimonial-quote-large">"</div>
+            <div className="testimonial-quote-large">"
             <p className="body-large testimonial-text-large">
               Our clubhouse was rarely used before ZestDo. Now it's buzzing with activity every evening. Parents are happy, kids are learning, and we earn revenue share. It's a perfect win-win partnership!
             </p>
@@ -298,14 +295,14 @@ const ForApartments = () => {
               <div 
                 className="testimonial-author-avatar"
                 style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1624272864537-8ecc72b67958?w=100&h=100&fit=crop)' }}
-              ></div>
+              >
               <div>
                 <h4 className="body-large font-medium">Meena Iyer</h4>
                 <p className="body-standard text-secondary">Secretary, Brigade Gateway</p>
-              </div>
-            </div>
+              
+            
           </motion.div>
-        </div>
+        
       </section>
 
       {/* CTA */}
@@ -329,13 +326,12 @@ const ForApartments = () => {
               <Button className="btn-secondary btn-large">
                 Download Brochure
               </Button>
-            </div>
+            
           </motion.div>
-        </div>
+        
       </section>
 
-      <Footer />
-    </div>
+    
   );
 };
 

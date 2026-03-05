@@ -1,11 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="page-wrapper">
-      <Header />
+    
       
       <section className="legal-page">
         <div className="container-narrow">
@@ -144,12 +141,11 @@ const PrivacyPolicy = () => {
                 <li>Address: Koramangala, Bengaluru, Karnataka 560034</li>
               </ul>
             </section>
-          </div>
-        </div>
+          
+        
       </section>
 
-      <Footer />
-    </div>
+    
   );
 };
 

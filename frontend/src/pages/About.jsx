@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Target, Heart, Users, Award, TrendingUp, Zap } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const About = () => {
   const values = [
@@ -47,8 +45,7 @@ const About = () => {
   ];
 
   return (
-    <div className="page-wrapper">
-      <Header />
+    
       
       {/* Hero Section */}
       <section className="page-hero about-hero">
@@ -64,7 +61,7 @@ const About = () => {
               Transforming apartment communities into thriving learning hubs for children
             </p>
           </motion.div>
-        </div>
+        
       </section>
 
       {/* Our Story */}
@@ -101,8 +98,8 @@ const About = () => {
                 Our mission is simple: bring back the joy of community-based learning, reduce screen time, and give every child the opportunity to discover their passion.
               </p>
             </motion.div>
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* Mission & Vision */}
@@ -135,8 +132,8 @@ const About = () => {
                 To become India's leading platform for apartment-based children's activities, present in every major city, transforming how children learn and grow.
               </p>
             </motion.div>
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* Core Values */}
@@ -169,14 +166,14 @@ const About = () => {
                 >
                   <div className="value-icon">
                     <IconComponent size={32} />
-                  </div>
+                  
                   <h3 className="heading-medium">{value.title}</h3>
                   <p className="body-standard text-secondary">{value.description}</p>
                 </motion.div>
               );
             })}
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* Team Section */}
@@ -207,14 +204,14 @@ const About = () => {
               >
                 <div className="team-avatar">
                   {member.name.charAt(0)}
-                </div>
+                
                 <h3 className="heading-medium">{member.name}</h3>
                 <p className="body-standard team-role">{member.role}</p>
                 <p className="body-standard text-secondary">{member.description}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* Stats Section */}
@@ -228,8 +225,8 @@ const About = () => {
               transition={{ duration: 0.5 }}
               className="stat-large"
             >
-              <div className="stat-number-large">50+</div>
-              <div className="stat-label-large">Partner Apartments</div>
+              <div className="stat-number-large">50+
+              <div className="stat-label-large">Partner Apartments
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -238,8 +235,8 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="stat-large"
             >
-              <div className="stat-number-large">100+</div>
-              <div className="stat-label-large">Verified Trainers</div>
+              <div className="stat-number-large">100+
+              <div className="stat-label-large">Verified Trainers
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -248,8 +245,8 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="stat-large"
             >
-              <div className="stat-number-large">2000+</div>
-              <div className="stat-label-large">Happy Children</div>
+              <div className="stat-number-large">2000+
+              <div className="stat-label-large">Happy Children
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -258,15 +255,14 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="stat-large"
             >
-              <div className="stat-number-large">8+</div>
-              <div className="stat-label-large">Activity Categories</div>
+              <div className="stat-number-large">8+
+              <div className="stat-label-large">Activity Categories
             </motion.div>
-          </div>
-        </div>
+          
+        
       </section>
 
-      <Footer />
-    </div>
+    
   );
 };
 

@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { DollarSign, Users, Calendar, TrendingUp, Award, Briefcase } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
 
 const ForTrainers = () => {
@@ -49,8 +47,7 @@ const ForTrainers = () => {
   ];
 
   return (
-    <div className="page-wrapper">
-      <Header />
+    
       
       {/* Hero Section */}
       <section className="page-hero trainers-hero">
@@ -69,7 +66,7 @@ const ForTrainers = () => {
               Apply as Trainer
             </Button>
           </motion.div>
-        </div>
+        
       </section>
 
       {/* Benefits Section */}
@@ -102,14 +99,14 @@ const ForTrainers = () => {
                 >
                   <div className="benefit-icon">
                     <IconComponent size={32} />
-                  </div>
+                  
                   <h3 className="heading-medium">{benefit.title}</h3>
                   <p className="body-standard text-secondary">{benefit.description}</p>
                 </motion.div>
               );
             })}
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* Requirements Section */}
@@ -148,8 +145,8 @@ const ForTrainers = () => {
                 alt="Trainer teaching"
               />
             </motion.div>
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* How It Works */}
@@ -184,15 +181,15 @@ const ForTrainers = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="timeline-item"
               >
-                <div className="timeline-number">{item.step}</div>
+                <div className="timeline-number">{item.step}
                 <div className="timeline-content">
                   <h3 className="heading-medium">{item.title}</h3>
                   <p className="body-standard text-secondary">{item.desc}</p>
-                </div>
+                
               </motion.div>
             ))}
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* Testimonial */}
@@ -205,7 +202,7 @@ const ForTrainers = () => {
             transition={{ duration: 0.6 }}
             className="testimonial-highlight"
           >
-            <div className="testimonial-quote-large">"</div>
+            <div className="testimonial-quote-large">"
             <p className="body-large testimonial-text-large">
               Teaching through ZestDo has opened up amazing opportunities. I can now reach multiple apartment communities, manage my schedule easily, and the payment system is seamless. Best decision for my teaching career!
             </p>
@@ -213,14 +210,14 @@ const ForTrainers = () => {
               <div 
                 className="testimonial-author-avatar"
                 style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1603367563698-67012943fd67?w=100&h=100&fit=crop)' }}
-              ></div>
+              >
               <div>
                 <h4 className="body-large font-medium">Rajesh Kumar</h4>
                 <p className="body-standard text-secondary">Chess Coach, ZestDo Trainer</p>
-              </div>
-            </div>
+              
+            
           </motion.div>
-        </div>
+        
       </section>
 
       {/* CTA */}
@@ -244,13 +241,12 @@ const ForTrainers = () => {
               <Button className="btn-secondary btn-large">
                 Learn More
               </Button>
-            </div>
+            
           </motion.div>
-        </div>
+        
       </section>
 
-      <Footer />
-    </div>
+    
   );
 };
 

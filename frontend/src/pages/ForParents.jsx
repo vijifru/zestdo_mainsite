@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Shield, Users, Calendar, TrendingUp, Award, Heart } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
 
 const ForParents = () => {
@@ -63,8 +61,7 @@ const ForParents = () => {
   ];
 
   return (
-    <div className="page-wrapper">
-      <Header />
+    
       
       {/* Hero Section */}
       <section className="page-hero parents-hero">
@@ -83,7 +80,7 @@ const ForParents = () => {
               Get Started Today
             </Button>
           </motion.div>
-        </div>
+        
       </section>
 
       {/* Benefits Section */}
@@ -116,14 +113,14 @@ const ForParents = () => {
                 >
                   <div className="benefit-icon">
                     <IconComponent size={32} />
-                  </div>
+                  
                   <h3 className="heading-medium">{benefit.title}</h3>
                   <p className="body-standard text-secondary">{benefit.description}</p>
                 </motion.div>
               );
             })}
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* How It Works */}
@@ -152,13 +149,13 @@ const ForParents = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="step-card"
               >
-                <div className="step-number">{item.step}</div>
+                <div className="step-number">{item.step}
                 <h3 className="heading-medium">{item.title}</h3>
                 <p className="body-standard text-secondary">{item.description}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
+          
+        
       </section>
 
       {/* Testimonials Preview */}
@@ -181,7 +178,7 @@ const ForParents = () => {
             transition={{ duration: 0.6 }}
             className="testimonial-highlight"
           >
-            <div className="testimonial-quote-large">"</div>
+            <div className="testimonial-quote-large">"
             <p className="body-large testimonial-text-large">
               ZestDo has been a game-changer for our family. My daughter now spends her evenings learning dance instead of watching YouTube. The convenience of classes in our own apartment is unbeatable!
             </p>
@@ -189,14 +186,14 @@ const ForParents = () => {
               <div 
                 className="testimonial-author-avatar"
                 style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1588979355313-6711a095465f?w=100&h=100&fit=crop)' }}
-              ></div>
+              >
               <div>
                 <h4 className="body-large font-medium">Priya Sharma</h4>
                 <p className="body-standard text-secondary">Parent, Prestige Lakeside</p>
-              </div>
-            </div>
+              
+            
           </motion.div>
-        </div>
+        
       </section>
 
       {/* CTA Section */}
@@ -220,13 +217,12 @@ const ForParents = () => {
               <Button className="btn-secondary btn-large">
                 Contact Us
               </Button>
-            </div>
+            
           </motion.div>
-        </div>
+        
       </section>
 
-      <Footer />
-    </div>
+    
   );
 };
 
