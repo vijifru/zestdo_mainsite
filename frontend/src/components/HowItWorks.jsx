@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Users, GraduationCap, Building2, ArrowRight } from 'lucide-react';
-import { userRoles } from '../data/mock';
+import { getUserRoles } from '../services/api';
 import { Button } from './ui/button';
 
 const iconMap = {
@@ -11,6 +11,36 @@ const iconMap = {
 };
 
 const HowItWorks = () => {
+  const [userRoles, setUserRoles] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUserRoles = async () => {
+      try {
+        const data = await getUserRoles();
+        setUserRoles(data);
+      } catch (error) {
+        console.error('Error fetching user roles:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchUserRoles();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="section-padding bg-light">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="heading-large text-center">How ZestDo Works</h2>
+            <p className="body-large text-center text-secondary">Loading...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="section-padding bg-light">
       <div className="container">
@@ -38,6 +68,7 @@ const HowItWorks = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="role-card"
+                data-testid={`role-card-${role.id}`}
               >
                 <div className="role-icon">
                   <IconComponent size={32} />
