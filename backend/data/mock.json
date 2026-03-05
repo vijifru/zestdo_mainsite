@@ -154,7 +154,7 @@
     {
       "id": 1,
       "duration": "1 Month",
-      "price": "₹999",
+      "price": "\u20b9999",
       "priceValue": 999,
       "features": [
         "Access to all apartment classes",
@@ -167,9 +167,9 @@
     {
       "id": 2,
       "duration": "3 Months",
-      "price": "₹2,699",
+      "price": "\u20b92,699",
       "priceValue": 2699,
-      "savings": "Save ₹298",
+      "savings": "Save \u20b9298",
       "features": [
         "All 1-month features",
         "Priority class booking",
@@ -181,9 +181,9 @@
     {
       "id": 3,
       "duration": "6 Months",
-      "price": "₹4,999",
+      "price": "\u20b94,999",
       "priceValue": 4999,
-      "savings": "Save ₹995",
+      "savings": "Save \u20b9995",
       "features": [
         "All 3-month features",
         "Guaranteed slot booking",
@@ -211,7 +211,19 @@
       "image": "https://images.unsplash.com/photo-1624204386084-dd8c05e32226?w=500&h=350&fit=crop"
     }
   ],
-  "contactSubmissions": [],
+  "contactSubmissions": [
+    {
+      "id": "63de5d27-636c-4add-8a4a-9aa7e1fc9cae",
+      "name": "Test User",
+      "email": "test@example.com",
+      "phone": "",
+      "userType": "parent",
+      "subject": "Test Inquiry",
+      "message": "This is a test message from the API integration test.",
+      "createdAt": "2026-03-05T16:33:32.076097+00:00",
+      "status": "pending"
+    }
+  ],
   "waitlistSignups": [],
   "stats": {
     "apartments": 50,
