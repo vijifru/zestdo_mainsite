@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 import { fetchTestimonials } from '../store/slices/testimonialsSlice';
 

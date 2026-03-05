@@ -1,21 +1,23 @@
 import React from "react";
-import "@/App.css";
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Contact from "@/pages/Contact";
-import ForParents from "@/pages/ForParents";
-import ForTrainers from "@/pages/ForTrainers";
-import ForApartments from "@/pages/ForApartments";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
-import TermsOfService from "@/pages/TermsOfService";
+import ScrollToTop from "./components/ScrollToTop";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import ForParents from "./pages/ForParents";
+import ForTrainers from "./pages/ForTrainers";
+import ForApartments from "./pages/ForApartments";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

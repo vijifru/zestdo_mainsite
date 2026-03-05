@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { MapPin, Users, TrendingUp } from 'lucide-react';
 import { fetchCommunities } from '../store/slices/communitiesSlice';
 import { Button } from './ui/button';

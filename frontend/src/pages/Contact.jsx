@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { motion } from 'motion/react';
+import { Link } from "react-router-dom";          // <- added
+import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, Loader2 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { submitContact, resetContactForm } from '../store/slices/contactSlice';
@@ -262,7 +263,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Quick Links */}
+     {/* Quick Links */}
       <section className="section-padding bg-light">
         <div className="container">
           <motion.div
@@ -288,7 +289,9 @@ const Contact = () => {
             >
               <h3 className="heading-medium">For Parents</h3>
               <p className="body-standard text-secondary">Learn how to enroll your child in activities</p>
-              <Button className="btn-secondary mt-4">Learn More</Button>
+              <Link to="/for-parents">
+                <Button className="btn-secondary mt-4">Learn More</Button>
+              </Link>
             </motion.div>
 
             <motion.div
@@ -300,7 +303,9 @@ const Contact = () => {
             >
               <h3 className="heading-medium">For Trainers</h3>
               <p className="body-standard text-secondary">Join our network of expert trainers</p>
-              <Button className="btn-secondary mt-4">Learn More</Button>
+              <Link to="/for-trainers">
+                <Button className="btn-secondary mt-4">Learn More</Button>
+              </Link>
             </motion.div>
 
             <motion.div
@@ -312,7 +317,9 @@ const Contact = () => {
             >
               <h3 className="heading-medium">For Apartments</h3>
               <p className="body-standard text-secondary">Partner with us to activate your amenities</p>
-              <Button className="btn-secondary mt-4">Learn More</Button>
+              <Link to="/for-apartments">
+                <Button className="btn-secondary mt-4">Learn More</Button>
+              </Link>
             </motion.div>
           </div>
         </div>

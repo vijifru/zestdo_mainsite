@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Smartphone } from 'lucide-react';
 
 const AppDownload = ({ variant = 'default', userType = 'parent' }) => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Music, Drama, Cpu, Puzzle, Palette, Heart, Mic, Trophy } from 'lucide-react';
 import { fetchActivities } from '../store/slices/activitiesSlice';
 

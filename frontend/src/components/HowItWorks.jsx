@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Users, GraduationCap, Building2, ArrowRight } from 'lucide-react';
 import { fetchUserRoles } from '../store/slices/userRolesSlice';
 import { Button } from './ui/button';

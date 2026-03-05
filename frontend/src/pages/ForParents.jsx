@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Shield, Users, Calendar, TrendingUp, Award, Heart } from 'lucide-react';
 import { Button } from '../components/ui/button';
 

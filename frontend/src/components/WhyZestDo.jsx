@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { X, Check } from 'lucide-react';
 import { fetchWhyZestDo } from '../store/slices/whyZestDoSlice';
 

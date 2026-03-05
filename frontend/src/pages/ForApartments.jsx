@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Building2, TrendingUp, Users, DollarSign, Award, Target, Handshake } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
