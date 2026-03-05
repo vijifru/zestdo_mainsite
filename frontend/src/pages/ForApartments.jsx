@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Building2, TrendingUp, Users, DollarSign, Award, Target } from 'lucide-react';
+import { Building2, TrendingUp, Users, DollarSign, Award, Target, Handshake } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
 const ForApartments = () => {
@@ -8,7 +8,7 @@ const ForApartments = () => {
     {
       icon: DollarSign,
       title: "Revenue Generation",
-      description: "Earn 20% revenue share from all classes conducted in your premises"
+      description: "Earn recurring revenue from classes conducted in your premises"
     },
     {
       icon: Users,
@@ -18,7 +18,7 @@ const ForApartments = () => {
     {
       icon: TrendingUp,
       title: "Amenity Utilization",
-      description: "Transform underused clubhouse/common areas into revenue generators"
+      description: "Transform underused clubhouse/common areas into active spaces"
     },
     {
       icon: Award,
@@ -42,7 +42,7 @@ const ForApartments = () => {
     location: "Rajaji Nagar, Bengaluru",
     residents: "1500 families",
     results: [
-      "₹45,000/month additional revenue",
+      "Significant monthly additional revenue",
       "8 active classes running weekly",
       "150+ children enrolled",
       "85% resident satisfaction increase",
@@ -63,7 +63,7 @@ const ForApartments = () => {
           >
             <h1 className="display-hero">For Apartments</h1>
             <p className="body-large">
-              Transform your amenities into revenue-generating community hubs
+              Transform your amenities into thriving community hubs
             </p>
             <Button className="btn-primary btn-large mt-4">
               Partner With Us
@@ -112,7 +112,7 @@ const ForApartments = () => {
         </div>
       </section>
 
-      {/* Revenue Model */}
+      {/* Partnership Model */}
       <section className="section-padding bg-light">
         <div className="container">
           <motion.div
@@ -122,56 +122,59 @@ const ForApartments = () => {
             transition={{ duration: 0.6 }}
             className="section-header"
           >
-            <h2 className="heading-large text-center">Simple Revenue Model</h2>
+            <h2 className="heading-large text-center">Partnership Benefits</h2>
             <p className="body-large text-center text-secondary">
-              Transparent and fair revenue sharing
+              A win-win collaboration for your community
             </p>
           </motion.div>
 
-          <div className="revenue-breakdown">
+          <div className="partnership-cards">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="revenue-card main-revenue"
+              className="partnership-card"
             >
-              <h3 className="revenue-percentage">20%</h3>
-              <p className="revenue-label">Apartment Revenue Share</p>
+              <div className="partnership-icon">
+                <Handshake size={48} />
+              </div>
+              <h3 className="heading-medium">Revenue Sharing</h3>
               <p className="body-standard text-secondary">
-                You earn 20% of all subscription fees from classes in your premises
+                Earn a share of revenue from all classes conducted in your premises. Terms customized based on your community size and engagement.
               </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="partnership-card"
+            >
+              <div className="partnership-icon">
+                <Target size={48} />
+              </div>
+              <h3 className="heading-medium">Zero Risk Model</h3>
+              <p className="body-standard text-secondary">
+                No upfront investment required. We manage trainers, marketing, scheduling, and operations. You provide the space.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="revenue-example"
+              className="partnership-card"
             >
-              <h4 className="heading-medium text-center mb-4">Example Calculation</h4>
-              <div className="calculation-grid">
-                <div className="calc-item">
-                  <div className="calc-number">50</div>
-                  <div className="calc-label">Children Enrolled</div>
-                </div>
-                <div className="calc-operator">×</div>
-                <div className="calc-item">
-                  <div className="calc-number">₹999</div>
-                  <div className="calc-label">Per Month Plan</div>
-                </div>
-                <div className="calc-operator">×</div>
-                <div className="calc-item">
-                  <div className="calc-number">20%</div>
-                  <div className="calc-label">Your Share</div>
-                </div>
-                <div className="calc-operator">=</div>
-                <div className="calc-item highlight">
-                  <div className="calc-number">₹9,990</div>
-                  <div className="calc-label">Monthly Revenue</div>
-                </div>
+              <div className="partnership-icon">
+                <TrendingUp size={48} />
               </div>
+              <h3 className="heading-medium">Flexible Terms</h3>
+              <p className="body-standard text-secondary">
+                Partnership terms tailored to your community's needs. Schedule a call to discuss what works best for you.
+              </p>
             </motion.div>
           </div>
         </div>
@@ -288,7 +291,7 @@ const ForApartments = () => {
           >
             <div className="testimonial-quote-large">"</div>
             <p className="body-large testimonial-text-large">
-              Our clubhouse was rarely used before ZestDo. Now it's buzzing with activity every evening. Parents are happy, kids are learning, and we earn revenue share. It's a perfect win-win partnership!
+              Our clubhouse was rarely used before ZestDo. Now it's buzzing with activity every evening. Parents are happy, kids are learning, and our community is thriving. It's a perfect win-win partnership!
             </p>
             <div className="testimonial-author">
               <div 
@@ -316,7 +319,7 @@ const ForApartments = () => {
           >
             <h2 className="heading-large text-center">Ready to Transform Your Community?</h2>
             <p className="body-large text-center text-secondary">
-              Join 50+ apartments generating revenue through ZestDo
+              Join 50+ apartments partnering with ZestDo
             </p>
             <div className="cta-buttons-center">
               <Button className="btn-primary btn-large">
