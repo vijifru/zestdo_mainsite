@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Music, Drama, Cpu, Puzzle, Palette, Heart, Mic, Trophy } from 'lucide-react';
-import { activities } from '../data/mock';
+import { getActivities } from '../services/api';
 
 const iconMap = {
   Music: Music,
@@ -15,6 +15,36 @@ const iconMap = {
 };
 
 const Activities = () => {
+  const [activities, setActivities] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchActivities = async () => {
+      try {
+        const data = await getActivities();
+        setActivities(data);
+      } catch (error) {
+        console.error('Error fetching activities:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchActivities();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="section-padding">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="heading-large text-center">Featured Activities</h2>
+            <p className="body-large text-center text-secondary">Loading...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="section-padding">
       <div className="container">
@@ -44,6 +74,7 @@ const Activities = () => {
                 whileHover={{ y: -8, transition: { duration: 0.2 } }}
                 className="activity-card"
                 style={{ '--activity-color': activity.color }}
+                data-testid={`activity-card-${activity.id}`}
               >
                 <div className="activity-image-container">
                   <img 
