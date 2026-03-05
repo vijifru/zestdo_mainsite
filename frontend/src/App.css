@@ -1306,7 +1306,8 @@
   .roles-grid,
   .activities-grid,
   .plans-grid,
-  .testimonials-grid {
+  .testimonials-grid,
+  .communities-grid {
     grid-template-columns: 1fr;
   }
   
