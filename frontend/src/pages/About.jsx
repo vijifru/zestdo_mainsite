@@ -60,7 +60,7 @@ const About = () => {
               Transforming apartment communities into thriving learning hubs for children
             </p>
           </motion.div>
-        
+        </div>
       </section>
 
       {/* Our Story */}
