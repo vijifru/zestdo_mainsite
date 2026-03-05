@@ -232,19 +232,25 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                {submitStatus && (
-                  <div className={`form-status ${submitStatus.type}`} data-testid="form-status">
-                    {submitStatus.message}
+                {contactForm.error && (
+                  <div className="form-status error" data-testid="form-status">
+                    {contactForm.error}
+                  </div>
+                )}
+
+                {contactForm.success && (
+                  <div className="form-status success" data-testid="form-status">
+                    Message sent successfully! We'll get back to you soon.
                   </div>
                 )}
 
                 <Button 
                   type="submit" 
                   className="btn-primary w-full"
-                  disabled={isSubmitting}
+                  disabled={contactForm.loading}
                   data-testid="contact-submit-btn"
                 >
-                  {isSubmitting ? (
+                  {contactForm.loading ? (
                     <>
                       <Loader2 size={20} className="mr-2 animate-spin" />
                       Sending...
