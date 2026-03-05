@@ -140,8 +140,8 @@ const PrivacyPolicy = () => {
                 <li>Address: Koramangala, Bengaluru, Karnataka 560034</li>
               </ul>
             </section>
-          
-        
+          </div>
+        </div>
       </section>
     </>
   );
