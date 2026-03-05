@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Clock, Send, Loader2 } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { submitContactForm } from '../services/api';
+import { submitContact, resetContactForm } from '../store/slices/contactSlice';
 
 const Contact = () => {
+  const dispatch = useDispatch();
+  const { contactForm } = useSelector((state) => state.contact);
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,27 +17,24 @@ const Contact = () => {
     subject: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
+
+  useEffect(() => {
+    // Reset form on success
+    if (contactForm.success) {
+      setFormData({ name: '', email: '', phone: '', userType: 'parent', subject: '', message: '' });
+    }
+  }, [contactForm.success]);
+
+  useEffect(() => {
+    // Reset form state on unmount
+    return () => {
+      dispatch(resetContactForm());
+    };
+  }, [dispatch]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-    
-    try {
-      const response = await submitContactForm(formData);
-      setSubmitStatus({ type: 'success', message: response.message });
-      setFormData({ name: '', email: '', phone: '', userType: 'parent', subject: '', message: '' });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitStatus({ 
-        type: 'error', 
-        message: error.response?.data?.error || 'Something went wrong. Please try again.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    dispatch(submitContact(formData));
   };
 
   const handleChange = (e) => {
