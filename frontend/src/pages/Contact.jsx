@@ -231,9 +231,29 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <Button type="submit" className="btn-primary w-full">
-                  <Send size={20} className="mr-2" />
-                  Send Message
+                {submitStatus && (
+                  <div className={`form-status ${submitStatus.type}`} data-testid="form-status">
+                    {submitStatus.message}
+                  </div>
+                )}
+
+                <Button 
+                  type="submit" 
+                  className="btn-primary w-full"
+                  disabled={isSubmitting}
+                  data-testid="contact-submit-btn"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 size={20} className="mr-2 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send size={20} className="mr-2" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </motion.div>
