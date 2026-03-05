@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Star, Quote } from 'lucide-react';
-import { testimonials } from '../data/mock';
+import { getTestimonials } from '../services/api';
 
 const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const data = await getTestimonials();
+        setTestimonials(data);
+      } catch (error) {
+        console.error('Error fetching testimonials:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchTestimonials();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="section-padding bg-light">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="heading-large text-center">What Our Community Says</h2>
+            <p className="body-large text-center text-secondary">Loading...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="section-padding bg-light">
       <div className="container">
@@ -29,6 +59,7 @@ const Testimonials = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="testimonial-card"
+              data-testid={`testimonial-card-${testimonial.id}`}
             >
               <div className="testimonial-header">
                 <div 
