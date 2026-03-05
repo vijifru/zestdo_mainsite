@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { X, Check } from 'lucide-react';
-import { whyZestDoPoints } from '../data/mock';
+import { getWhyZestDo } from '../services/api';
 
 const WhyZestDo = () => {
+  const [whyZestDoPoints, setWhyZestDoPoints] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchWhyZestDo = async () => {
+      try {
+        const data = await getWhyZestDo();
+        setWhyZestDoPoints(data);
+      } catch (error) {
+        console.error('Error fetching why ZestDo points:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchWhyZestDo();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="section-padding bg-light">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="heading-large text-center">Why ZestDo?</h2>
+            <p className="body-large text-center text-secondary">Loading...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="section-padding bg-light">
       <div className="container">
