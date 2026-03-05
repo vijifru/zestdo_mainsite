@@ -1,27 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Users, TrendingUp } from 'lucide-react';
+import { getCommunities } from '../services/api';
 import { Button } from './ui/button';
 
 const FeaturedCommunities = () => {
-  const communities = [
-    {
-      id: 1,
-      name: "Prestige Lakeside Habitat",
-      location: "Varthur, Bengaluru",
-      residents: "2000+ Families",
-      activities: "12 Active Classes",
-      image: "https://images.unsplash.com/photo-1515263487990-61b07816b324?w=600&h=400&fit=crop"
-    },
-    {
-      id: 2,
-      name: "Brigade Gateway",
-      location: "Rajaji Nagar, Bengaluru",
-      residents: "1500+ Families",
-      activities: "8 Active Classes",
-      image: "https://images.unsplash.com/photo-1624204386084-dd8c05e32226?w=600&h=400&fit=crop"
-    }
-  ];
+  const [communities, setCommunities] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCommunities = async () => {
+      try {
+        const data = await getCommunities();
+        setCommunities(data);
+      } catch (error) {
+        console.error('Error fetching communities:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchCommunities();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="section-padding bg-light">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="heading-large text-center">Featured Partner Communities</h2>
+            <p className="body-large text-center text-secondary">Loading...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="section-padding bg-light">
@@ -48,6 +60,7 @@ const FeaturedCommunities = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="community-card"
+              data-testid={`community-card-${community.id}`}
             >
               <div className="community-image-container">
                 <img 
@@ -66,11 +79,11 @@ const FeaturedCommunities = () => {
                   </div>
                   <div className="info-item">
                     <Users size={18} />
-                    <span className="body-standard">{community.residents}</span>
+                    <span className="body-standard">{community.trainersCount}+ Trainers</span>
                   </div>
                   <div className="info-item">
                     <TrendingUp size={18} />
-                    <span className="body-standard">{community.activities}</span>
+                    <span className="body-standard">{community.activitiesCount} Active Classes</span>
                   </div>
                 </div>
               </div>
