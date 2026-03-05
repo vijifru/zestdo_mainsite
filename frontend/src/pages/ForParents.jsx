@@ -150,7 +150,7 @@ const ForParents = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="step-card"
               >
-                <div className="step-number">{item.step}
+                <div className="step-number">{item.step}</div>
                 <h3 className="heading-medium">{item.title}</h3>
                 <p className="body-standard text-secondary">{item.description}</p>
               </motion.div>

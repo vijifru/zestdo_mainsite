@@ -184,11 +184,11 @@ const ForTrainers = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="timeline-item"
               >
-                <div className="timeline-number">{item.step}
+                <div className="timeline-number">{item.step}</div>
                 <div className="timeline-content">
                   <h3 className="heading-medium">{item.title}</h3>
                   <p className="body-standard text-secondary">{item.desc}</p>
-
+                </div>
               </motion.div>
             ))}
 
