@@ -294,7 +294,7 @@ const ForApartments = () => {
             transition={{ duration: 0.6 }}
             className="testimonial-highlight"
           >
-            <div className="testimonial-quote-large">"
+            <div className="testimonial-quote-large">"</div>
             <p className="body-large testimonial-text-large">
               Our clubhouse was rarely used before ZestDo. Now it's buzzing with activity every evening. Parents are happy, kids are learning, and we earn revenue share. It's a perfect win-win partnership!
             </p>
@@ -302,15 +302,13 @@ const ForApartments = () => {
               <div 
                 className="testimonial-author-avatar"
                 style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1624272864537-8ecc72b67958?w=100&h=100&fit=crop)' }}
-              >
+              ></div>
               <div>
                 <h4 className="body-large font-medium">Meena Iyer</h4>
                 <p className="body-standard text-secondary">Secretary, Brigade Gateway</p>
-
-
+              </div>
+            </div>
           </motion.div>
-
-          </div>
         </div>
       </section>
 
