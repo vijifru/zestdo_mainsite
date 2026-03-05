@@ -412,5 +412,68 @@ Will be detailed once backend development begins. Expected endpoints:
 
 ---
 
+## Code Architecture Refactoring (December 2025)
+
+### Backend Restructured ✅
+**New folder structure:**
+```
+/app/backend/
+├── server.py           # Main entry point, route registration
+├── routes/             # API route handlers
+│   ├── activities.py
+│   ├── testimonials.py
+│   ├── plans.py
+│   ├── contact.py
+│   ├── waitlist.py
+│   ├── trainers.py
+│   ├── apartments.py
+│   └── stats.py
+├── models/
+│   └── schemas.py      # Pydantic models
+├── services/
+│   └── database.py     # Mock.json CRUD operations
+├── utils/
+├── data/
+│   └── mock.json       # JSON database
+└── .env
+```
+
+### Frontend Redux Toolkit Integration ✅
+**New state management structure:**
+```
+/app/frontend/src/
+├── store/
+│   ├── index.js        # Store configuration
+│   └── slices/
+│       ├── activitiesSlice.js
+│       ├── testimonialsSlice.js
+│       ├── userRolesSlice.js
+│       ├── plansSlice.js
+│       ├── communitiesSlice.js
+│       ├── statsSlice.js
+│       ├── whyZestDoSlice.js
+│       └── contactSlice.js
+├── services/
+│   └── api.js          # Axios API service
+└── components/         # Updated to use Redux
+```
+
+**Updated Components:**
+- `Activities.jsx` - Uses `useDispatch` & `useSelector`
+- `Testimonials.jsx` - Uses Redux for testimonials state
+- `HowItWorks.jsx` - Uses Redux for user roles
+- `WhyZestDo.jsx` - Uses Redux for comparison points
+- `AppShowcase.jsx` - Uses Redux for subscription plans
+- `FeaturedCommunities.jsx` - Uses Redux for communities
+- `Contact.jsx` - Uses Redux for form submission state
+
+**Redux Features:**
+- Async thunks for API calls
+- Caching (prevents re-fetching if data exists)
+- Form state management (loading, success, error)
+- Auto form reset on success/unmount
+
+---
+
 **Last Updated:** December 2025  
-**Status:** Phase 2 Complete - Backend API Integrated ✓
+**Status:** Phase 3 Complete - Backend Restructured + Redux Integrated ✓
