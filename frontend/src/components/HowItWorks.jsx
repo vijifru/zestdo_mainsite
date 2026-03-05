@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'motion/react';
 import { Users, GraduationCap, Building2, ArrowRight } from 'lucide-react';
-import { getUserRoles } from '../services/api';
+import { fetchUserRoles } from '../store/slices/userRolesSlice';
 import { Button } from './ui/button';
 
 const iconMap = {
@@ -11,22 +12,14 @@ const iconMap = {
 };
 
 const HowItWorks = () => {
-  const [userRoles, setUserRoles] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const { items: userRoles, loading } = useSelector((state) => state.userRoles);
 
   useEffect(() => {
-    const fetchUserRoles = async () => {
-      try {
-        const data = await getUserRoles();
-        setUserRoles(data);
-      } catch (error) {
-        console.error('Error fetching user roles:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchUserRoles();
-  }, []);
+    if (userRoles.length === 0) {
+      dispatch(fetchUserRoles());
+    }
+  }, [dispatch, userRoles.length]);
 
   if (loading) {
     return (

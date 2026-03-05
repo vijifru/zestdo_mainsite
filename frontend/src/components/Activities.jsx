@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'motion/react';
 import { Music, Drama, Cpu, Puzzle, Palette, Heart, Mic, Trophy } from 'lucide-react';
-import { getActivities } from '../services/api';
+import { fetchActivities } from '../store/slices/activitiesSlice';
 
 const iconMap = {
   Music: Music,
@@ -15,22 +16,14 @@ const iconMap = {
 };
 
 const Activities = () => {
-  const [activities, setActivities] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const { items: activities, loading } = useSelector((state) => state.activities);
 
   useEffect(() => {
-    const fetchActivities = async () => {
-      try {
-        const data = await getActivities();
-        setActivities(data);
-      } catch (error) {
-        console.error('Error fetching activities:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchActivities();
-  }, []);
+    if (activities.length === 0) {
+      dispatch(fetchActivities());
+    }
+  }, [dispatch, activities.length]);
 
   if (loading) {
     return (

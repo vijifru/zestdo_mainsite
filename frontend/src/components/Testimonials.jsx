@@ -1,25 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'motion/react';
 import { Star, Quote } from 'lucide-react';
-import { getTestimonials } from '../services/api';
+import { fetchTestimonials } from '../store/slices/testimonialsSlice';
 
 const Testimonials = () => {
-  const [testimonials, setTestimonials] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const { items: testimonials, loading } = useSelector((state) => state.testimonials);
 
   useEffect(() => {
-    const fetchTestimonials = async () => {
-      try {
-        const data = await getTestimonials();
-        setTestimonials(data);
-      } catch (error) {
-        console.error('Error fetching testimonials:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchTestimonials();
-  }, []);
+    if (testimonials.length === 0) {
+      dispatch(fetchTestimonials());
+    }
+  }, [dispatch, testimonials.length]);
 
   if (loading) {
     return (
