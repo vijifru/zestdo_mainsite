@@ -45,8 +45,7 @@ const About = () => {
   ];
 
   return (
-    
-      
+    <>
       {/* Hero Section */}
       <section className="page-hero about-hero">
         <div className="container">
