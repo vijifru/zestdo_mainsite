@@ -65,7 +65,9 @@ const ForTrainers = () => {
               Apply as Trainer
             </Button>
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
 
       {/* Benefits Section */}
@@ -83,7 +85,7 @@ const ForTrainers = () => {
               Join 100+ expert trainers growing their teaching business
             </p>
           </motion.div>
-          
+
           <div className="benefits-grid">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
@@ -98,14 +100,16 @@ const ForTrainers = () => {
                 >
                   <div className="benefit-icon">
                     <IconComponent size={32} />
-                  
+
                   <h3 className="heading-medium">{benefit.title}</h3>
                   <p className="body-standard text-secondary">{benefit.description}</p>
                 </motion.div>
               );
             })}
-          
-        
+
+
+          </div>
+        </div>
       </section>
 
       {/* Requirements Section */}
@@ -144,8 +148,10 @@ const ForTrainers = () => {
                 alt="Trainer teaching"
               />
             </motion.div>
-          
-        
+
+
+          </div>
+        </div>
       </section>
 
       {/* How It Works */}
@@ -163,7 +169,7 @@ const ForTrainers = () => {
               Simple onboarding process in 5 steps
             </p>
           </motion.div>
-          
+
           <div className="steps-timeline">
             {[
               { step: "01", title: "Apply Online", desc: "Fill out the trainer application form with your details" },
@@ -184,11 +190,13 @@ const ForTrainers = () => {
                 <div className="timeline-content">
                   <h3 className="heading-medium">{item.title}</h3>
                   <p className="body-standard text-secondary">{item.desc}</p>
-                
+
               </motion.div>
             ))}
-          
-        
+
+
+          </div>
+        </div>
       </section>
 
       {/* Testimonial */}
@@ -213,10 +221,12 @@ const ForTrainers = () => {
               <div>
                 <h4 className="body-large font-medium">Rajesh Kumar</h4>
                 <p className="body-standard text-secondary">Chess Coach, ZestDo Trainer</p>
-              
-            
+
+
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
 
       {/* CTA */}
@@ -240,9 +250,11 @@ const ForTrainers = () => {
               <Button className="btn-secondary btn-large">
                 Learn More
               </Button>
-            
+
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
     </>
   );

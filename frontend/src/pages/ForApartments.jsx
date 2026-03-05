@@ -69,7 +69,9 @@ const ForApartments = () => {
               Partner With Us
             </Button>
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
 
       {/* Benefits Section */}
@@ -87,7 +89,7 @@ const ForApartments = () => {
               50+ apartments across Bengaluru trust us
             </p>
           </motion.div>
-          
+
           <div className="benefits-grid">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
@@ -102,14 +104,16 @@ const ForApartments = () => {
                 >
                   <div className="benefit-icon">
                     <IconComponent size={32} />
-                  
+
                   <h3 className="heading-medium">{benefit.title}</h3>
                   <p className="body-standard text-secondary">{benefit.description}</p>
                 </motion.div>
               );
             })}
-          
-        
+
+
+          </div>
+        </div>
       </section>
 
       {/* Revenue Model */}
@@ -127,7 +131,7 @@ const ForApartments = () => {
               Transparent and fair revenue sharing
             </p>
           </motion.div>
-          
+
           <div className="revenue-breakdown">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -155,26 +159,28 @@ const ForApartments = () => {
                 <div className="calc-item">
                   <div className="calc-number">50
                   <div className="calc-label">Children Enrolled
-                
+
                 <div className="calc-operator">×
                 <div className="calc-item">
                   <div className="calc-number">₹999
                   <div className="calc-label">Per Month Plan
-                
+
                 <div className="calc-operator">×
                 <div className="calc-item">
                   <div className="calc-number">20%
                   <div className="calc-label">Your Share
-                
+
                 <div className="calc-operator">=
                 <div className="calc-item highlight">
                   <div className="calc-number">₹9,990
                   <div className="calc-label">Monthly Revenue
-                
-              
+
+
             </motion.div>
-          
-        
+
+
+          </div>
+        </div>
       </section>
 
       {/* Case Study */}
@@ -192,7 +198,7 @@ const ForApartments = () => {
               Real results from our partner communities
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -206,14 +212,14 @@ const ForApartments = () => {
                   src="https://images.unsplash.com/photo-1624204386084-dd8c05e32226?w=600&h=400&fit=crop" 
                   alt={caseStudy.name}
                 />
-              
+
               <div className="case-study-info">
                 <h3 className="heading-large">{caseStudy.name}</h3>
                 <p className="body-large text-secondary">{caseStudy.location}</p>
                 <p className="body-standard text-muted">{caseStudy.residents}</p>
-              
-            
-            
+
+
+
             <div className="case-study-results">
               <h4 className="heading-medium mb-4">Results After 6 Months</h4>
               <div className="results-grid">
@@ -230,10 +236,12 @@ const ForApartments = () => {
                     <span className="body-standard">{result}</span>
                   </motion.div>
                 ))}
-              
-            
+
+
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
 
       {/* How It Works */}
@@ -251,7 +259,7 @@ const ForApartments = () => {
               Get started in 4 simple steps
             </p>
           </motion.div>
-          
+
           <div className="steps-grid">
             {[
               { step: "01", title: "Initial Discussion", desc: "Connect with our team to discuss your community's needs" },
@@ -272,8 +280,10 @@ const ForApartments = () => {
                 <p className="body-standard text-secondary">{item.desc}</p>
               </motion.div>
             ))}
-          
-        
+
+
+          </div>
+        </div>
       </section>
 
       {/* Testimonial */}
@@ -298,10 +308,12 @@ const ForApartments = () => {
               <div>
                 <h4 className="body-large font-medium">Meena Iyer</h4>
                 <p className="body-standard text-secondary">Secretary, Brigade Gateway</p>
-              
-            
+
+
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
 
       {/* CTA */}
@@ -325,9 +337,11 @@ const ForApartments = () => {
               <Button className="btn-secondary btn-large">
                 Download Brochure
               </Button>
-            
+
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
     </>
   );

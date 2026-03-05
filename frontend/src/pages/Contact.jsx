@@ -43,7 +43,9 @@ const Contact = () => {
               Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
             </p>
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
 
       {/* Contact Info & Form */}
@@ -62,60 +64,60 @@ const Contact = () => {
               <p className="body-standard text-secondary">
                 Reach out to us through any of these channels. We're here to help!
               </p>
-              
+
               <div className="contact-details">
                 <div className="contact-item">
                   <div className="contact-item-icon">
                     <MapPin size={24} />
-                  
+
                   <div className="contact-item-content">
                     <h4 className="body-large font-medium">Address</h4>
                     <p className="body-standard text-secondary">
                       Koramangala, Bengaluru<br />
                       Karnataka 560034, India
                     </p>
-                  
-                
+
+
 
                 <div className="contact-item">
                   <div className="contact-item-icon">
                     <Mail size={24} />
-                  
+
                   <div className="contact-item-content">
                     <h4 className="body-large font-medium">Email</h4>
                     <p className="body-standard text-secondary">
                       hello@zestdo.com<br />
                       support@zestdo.com
                     </p>
-                  
-                
+
+
 
                 <div className="contact-item">
                   <div className="contact-item-icon">
                     <Phone size={24} />
-                  
+
                   <div className="contact-item-content">
                     <h4 className="body-large font-medium">Phone</h4>
                     <p className="body-standard text-secondary">
                       +91 98765 43210<br />
                       Mon-Sat: 9 AM - 7 PM
                     </p>
-                  
-                
+
+
 
                 <div className="contact-item">
                   <div className="contact-item-icon">
                     <Clock size={24} />
-                  
+
                   <div className="contact-item-content">
                     <h4 className="body-large font-medium">Working Hours</h4>
                     <p className="body-standard text-secondary">
                       Monday - Saturday<br />
                       9:00 AM - 7:00 PM IST
                     </p>
-                  
-                
-              
+
+
+
             </motion.div>
 
             {/* Contact Form */}
@@ -139,7 +141,7 @@ const Contact = () => {
                     required
                     placeholder="Enter your full name"
                   />
-                
+
 
                 <div className="form-row">
                   <div className="form-group">
@@ -154,7 +156,7 @@ const Contact = () => {
                       required
                       placeholder="your@email.com"
                     />
-                  
+
 
                   <div className="form-group">
                     <label htmlFor="phone" className="form-label">Phone Number</label>
@@ -167,8 +169,8 @@ const Contact = () => {
                       className="form-input"
                       placeholder="+91 98765 43210"
                     />
-                  
-                
+
+
 
                 <div className="form-group">
                   <label htmlFor="userType" className="form-label">I am a *</label>
@@ -185,7 +187,7 @@ const Contact = () => {
                     <option value="apartment">Apartment Admin</option>
                     <option value="other">Other</option>
                   </select>
-                
+
 
                 <div className="form-group">
                   <label htmlFor="subject" className="form-label">Subject *</label>
@@ -199,7 +201,7 @@ const Contact = () => {
                     required
                     placeholder="How can we help you?"
                   />
-                
+
 
                 <div className="form-group">
                   <label htmlFor="message" className="form-label">Message *</label>
@@ -213,7 +215,7 @@ const Contact = () => {
                     rows="5"
                     placeholder="Tell us more about your inquiry..."
                   ></textarea>
-                
+
 
                 <Button type="submit" className="btn-primary w-full">
                   <Send size={20} className="mr-2" />
@@ -221,8 +223,10 @@ const Contact = () => {
                 </Button>
               </form>
             </motion.div>
-          
-        
+
+
+          </div>
+        </div>
       </section>
 
       {/* Quick Links */}
@@ -277,8 +281,10 @@ const Contact = () => {
               <p className="body-standard text-secondary">Partner with us to activate your amenities</p>
               <Button className="btn-secondary mt-4">Learn More</Button>
             </motion.div>
-          
-        
+
+
+          </div>
+        </div>
       </section>
     </>
   );

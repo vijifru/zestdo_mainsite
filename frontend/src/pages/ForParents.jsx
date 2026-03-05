@@ -79,7 +79,9 @@ const ForParents = () => {
               Get Started Today
             </Button>
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
 
       {/* Benefits Section */}
@@ -97,7 +99,7 @@ const ForParents = () => {
               Trusted by 2000+ families across Bengaluru
             </p>
           </motion.div>
-          
+
           <div className="benefits-grid">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
@@ -112,14 +114,16 @@ const ForParents = () => {
                 >
                   <div className="benefit-icon">
                     <IconComponent size={32} />
-                  
+
                   <h3 className="heading-medium">{benefit.title}</h3>
                   <p className="body-standard text-secondary">{benefit.description}</p>
                 </motion.div>
               );
             })}
-          
-        
+
+
+          </div>
+        </div>
       </section>
 
       {/* How It Works */}
@@ -137,7 +141,7 @@ const ForParents = () => {
               Four simple steps to get started
             </p>
           </motion.div>
-          
+
           <div className="steps-grid">
             {howItWorks.map((item, index) => (
               <motion.div
@@ -153,8 +157,10 @@ const ForParents = () => {
                 <p className="body-standard text-secondary">{item.description}</p>
               </motion.div>
             ))}
-          
-        
+
+
+          </div>
+        </div>
       </section>
 
       {/* Testimonials Preview */}
@@ -169,7 +175,7 @@ const ForParents = () => {
           >
             <h2 className="heading-large text-center">What Parents Say</h2>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -189,10 +195,12 @@ const ForParents = () => {
               <div>
                 <h4 className="body-large font-medium">Priya Sharma</h4>
                 <p className="body-standard text-secondary">Parent, Prestige Lakeside</p>
-              
-            
+
+
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
 
       {/* CTA Section */}
@@ -216,9 +224,11 @@ const ForParents = () => {
               <Button className="btn-secondary btn-large">
                 Contact Us
               </Button>
-            
+
           </motion.div>
-        
+
+          </div>
+        </div>
       </section>
     </>
   );
