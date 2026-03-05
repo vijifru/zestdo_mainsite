@@ -79,8 +79,6 @@ const ForParents = () => {
               Get Started Today
             </Button>
           </motion.div>
-
-          </div>
         </div>
       </section>
 
