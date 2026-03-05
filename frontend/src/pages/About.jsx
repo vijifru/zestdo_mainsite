@@ -97,8 +97,8 @@ const About = () => {
                 Our mission is simple: bring back the joy of community-based learning, reduce screen time, and give every child the opportunity to discover their passion.
               </p>
             </motion.div>
-          
-        
+          </div>
+        </div>
       </section>
 
       {/* Mission & Vision */}
