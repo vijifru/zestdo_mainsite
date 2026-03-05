@@ -208,14 +208,14 @@ const ForApartments = () => {
                   src="https://images.unsplash.com/photo-1624204386084-dd8c05e32226?w=600&h=400&fit=crop" 
                   alt={caseStudy.name}
                 />
-
+              </div>
               <div className="case-study-info">
                 <h3 className="heading-large">{caseStudy.name}</h3>
                 <p className="body-large text-secondary">{caseStudy.location}</p>
                 <p className="body-standard text-muted">{caseStudy.residents}</p>
-
-
-
+              </div>
+            </div>
+            
             <div className="case-study-results">
               <h4 className="heading-medium mb-4">Results After 6 Months</h4>
               <div className="results-grid">

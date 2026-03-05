@@ -113,9 +113,9 @@ const Contact = () => {
                       Monday - Saturday<br />
                       9:00 AM - 7:00 PM IST
                     </p>
-
-
-
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
             {/* Contact Form */}
