@@ -102,7 +102,7 @@ const ForApartments = () => {
                 >
                   <div className="benefit-icon">
                     <IconComponent size={32} />
-
+                  </div>
                   <h3 className="heading-medium">{benefit.title}</h3>
                   <p className="body-standard text-secondary">{benefit.description}</p>
                 </motion.div>
