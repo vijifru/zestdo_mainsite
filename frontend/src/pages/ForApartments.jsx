@@ -333,7 +333,7 @@ const ForApartments = () => {
               <Button className="btn-secondary btn-large">
                 Download Brochure
               </Button>
-
+            </div>
           </motion.div>
         </div>
       </section>
