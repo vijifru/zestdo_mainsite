@@ -222,6 +222,17 @@
       "message": "This is a test message from the API integration test.",
       "createdAt": "2026-03-05T16:33:32.076097+00:00",
       "status": "pending"
+    },
+    {
+      "id": "16cc44c3-457f-46c1-8aa1-8acb9f9dc48f",
+      "name": "Redux Test User",
+      "email": "redux-test@example.com",
+      "phone": "",
+      "userType": "parent",
+      "subject": "Redux Integration Test",
+      "message": "Testing Redux state management for contact form",
+      "createdAt": "2026-03-05T16:50:19.903260+00:00",
+      "status": "pending"
     }
   ],
   "waitlistSignups": [],
