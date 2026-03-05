@@ -365,5 +365,52 @@ Will be detailed once backend development begins. Expected endpoints:
 
 ---
 
+## Feature Addition: Backend API with Mock Database (December 2025)
+
+### Backend Implementation ✅
+**Feature:** Created a FastAPI backend with mock.json as the database, integrated with the frontend.
+
+**Backend Endpoints:**
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/health` | GET | Health check |
+| `/api/activities` | GET | Get all activities |
+| `/api/activities/:id` | GET | Get activity by ID |
+| `/api/testimonials` | GET | Get all testimonials |
+| `/api/testimonials/role/:role` | GET | Get testimonials by role |
+| `/api/user-roles` | GET | Get user roles info |
+| `/api/why-zestdo` | GET | Get why ZestDo points |
+| `/api/subscription-plans` | GET | Get subscription plans |
+| `/api/subscription-plans/popular` | GET | Get popular plan |
+| `/api/communities` | GET | Get partner communities |
+| `/api/stats` | GET | Get platform statistics |
+| `/api/contact` | POST | Submit contact form |
+| `/api/contact` | GET | Get contact submissions |
+| `/api/waitlist` | POST | Join waitlist |
+| `/api/waitlist/count` | GET | Get waitlist count |
+| `/api/trainer-applications` | POST | Submit trainer application |
+| `/api/apartment-inquiries` | POST | Submit apartment inquiry |
+
+**Frontend Integration:**
+- Created `/app/frontend/src/services/api.js` - API service layer
+- Updated components to fetch data from API:
+  - `Activities.jsx` - Loads activities from API
+  - `Testimonials.jsx` - Loads testimonials from API
+  - `HowItWorks.jsx` - Loads user roles from API
+  - `WhyZestDo.jsx` - Loads comparison points from API
+  - `AppShowcase.jsx` - Loads subscription plans from API
+  - `FeaturedCommunities.jsx` - Loads communities from API
+  - `Contact.jsx` - Submits contact form to API
+
+**Database File:**
+- `/app/backend/data/mock.json` - JSON file storing all data
+
+**Testing:**
+- All API endpoints tested via curl
+- Contact form submission verified working
+- Data persists to mock.json file
+
+---
+
 **Last Updated:** December 2025  
-**Status:** Phase 2 Complete - All Static Pages Working ✓
+**Status:** Phase 2 Complete - Backend API Integrated ✓
