@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Loader2 } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import { submitContactForm } from '../services/api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,12 +13,27 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for contacting us! We will get back to you within 24 hours.');
-    setFormData({ name: '', email: '', phone: '', userType: 'parent', subject: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    try {
+      const response = await submitContactForm(formData);
+      setSubmitStatus({ type: 'success', message: response.message });
+      setFormData({ name: '', email: '', phone: '', userType: 'parent', subject: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus({ 
+        type: 'error', 
+        message: error.response?.data?.error || 'Something went wrong. Please try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
