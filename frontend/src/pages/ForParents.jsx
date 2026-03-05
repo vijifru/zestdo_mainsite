@@ -220,10 +220,8 @@ const ForParents = () => {
               <Button className="btn-secondary btn-large">
                 Contact Us
               </Button>
-
+            </div>
           </motion.div>
-
-          </div>
         </div>
       </section>
     </>

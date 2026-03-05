@@ -246,7 +246,7 @@ const ForTrainers = () => {
               <Button className="btn-secondary btn-large">
                 Learn More
               </Button>
-
+            </div>
           </motion.div>
         </div>
       </section>
