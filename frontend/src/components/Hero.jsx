@@ -100,11 +100,12 @@ const Hero = () => {
                 <div className="floating-icon icon-art">🎨</div>
                 <div className="floating-icon icon-robot">🤖</div>
                 <div className="floating-icon icon-dance">💃</div>
-                <div className="app-mockup-placeholder">
-                  <div className="mockup-screen">
-                    <div className="mockup-header"></div>
-                    <div className="mockup-content"></div>
-                  </div>
+                <div className="hero-image-wrapper">
+                  <img 
+                    src="https://images.unsplash.com/photo-1766932901295-d4185660341b?w=500&h=600&fit=crop" 
+                    alt="Children learning activities in community"
+                    className="hero-main-image"
+                  />
                 </div>
               </div>
             </motion.div>

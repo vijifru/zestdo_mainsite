@@ -45,12 +45,23 @@ const Activities = () => {
                 className="activity-card"
                 style={{ '--activity-color': activity.color }}
               >
-                <div className="activity-icon">
-                  <IconComponent size={32} />
+                <div className="activity-image-container">
+                  <img 
+                    src={activity.image} 
+                    alt={activity.name}
+                    className="activity-image"
+                  />
+                  <div className="activity-overlay">
+                    <div className="activity-icon">
+                      <IconComponent size={32} />
+                    </div>
+                  </div>
                 </div>
-                <h3 className="heading-medium">{activity.name}</h3>
-                <p className="body-standard text-secondary">{activity.description}</p>
-                <button className="view-classes-btn">View Classes →</button>
+                <div className="activity-content">
+                  <h3 className="heading-medium">{activity.name}</h3>
+                  <p className="body-standard text-secondary">{activity.description}</p>
+                  <button className="view-classes-btn">View Classes →</button>
+                </div>
               </motion.div>
             );
           })}

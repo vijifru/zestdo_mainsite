@@ -31,8 +31,10 @@ const Testimonials = () => {
               className="testimonial-card"
             >
               <div className="testimonial-header">
-                <div className="testimonial-avatar">
-                  {testimonial.name.charAt(0)}
+                <div 
+                  className="testimonial-avatar"
+                  style={{ backgroundImage: `url(${testimonial.image})` }}
+                >
                 </div>
                 <div className="testimonial-info">
                   <h4 className="body-large font-medium">{testimonial.name}</h4>
