@@ -3,9 +3,85 @@ import { Instagram, Twitter, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  // Dummy app store links
+  const appLinks = {
+    parent: {
+      android: 'https://play.google.com/store/apps/details?id=com.zestdo.parent',
+      ios: 'https://apps.apple.com/app/zestdo-parent/id123456789'
+    },
+    trainer: {
+      android: 'https://play.google.com/store/apps/details?id=com.zestdo.trainer',
+      ios: 'https://apps.apple.com/app/zestdo-trainer/id987654321'
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="container">
+        {/* App Download Section */}
+        <div className="footer-apps">
+          <div className="footer-app-section">
+            <h4 className="footer-heading">Parent App</h4>
+            <p className="body-small text-secondary mb-3">Book classes & track progress</p>
+            <div className="footer-store-badges">
+              <a 
+                href={appLinks.parent.android} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="footer-store-badge"
+                data-testid="footer-download-android-parent"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                  alt="Get it on Google Play" 
+                />
+              </a>
+              <a 
+                href={appLinks.parent.ios} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="footer-store-badge"
+                data-testid="footer-download-ios-parent"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                  alt="Download on the App Store" 
+                />
+              </a>
+            </div>
+          </div>
+          <div className="footer-app-section">
+            <h4 className="footer-heading">Trainer App</h4>
+            <p className="body-small text-secondary mb-3">Manage classes & earnings</p>
+            <div className="footer-store-badges">
+              <a 
+                href={appLinks.trainer.android} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="footer-store-badge"
+                data-testid="footer-download-android-trainer"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                  alt="Get it on Google Play" 
+                />
+              </a>
+              <a 
+                href={appLinks.trainer.ios} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="footer-store-badge"
+                data-testid="footer-download-ios-trainer"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                  alt="Download on the App Store" 
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className="footer-content">
           <div className="footer-column">
             <div className="footer-brand">

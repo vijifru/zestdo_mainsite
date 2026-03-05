@@ -195,6 +195,77 @@ const ForParents = () => {
         </div>
       </section>
 
+      {/* App Download Section */}
+      <section className="section-padding">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="section-header"
+          >
+            <h2 className="heading-large text-center">Download the Parent App</h2>
+            <p className="body-large text-center text-secondary">
+              Book classes, track progress, and stay connected - all from your phone
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="app-download-card"
+          >
+            <div className="app-download-features">
+              <div className="app-feature-item">
+                <span className="app-feature-check">✓</span>
+                <span>Browse & book classes instantly</span>
+              </div>
+              <div className="app-feature-item">
+                <span className="app-feature-check">✓</span>
+                <span>Real-time progress updates</span>
+              </div>
+              <div className="app-feature-item">
+                <span className="app-feature-check">✓</span>
+                <span>Direct chat with trainers</span>
+              </div>
+              <div className="app-feature-item">
+                <span className="app-feature-check">✓</span>
+                <span>Class reminders & notifications</span>
+              </div>
+            </div>
+            <div className="app-download-buttons">
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.zestdo.parent" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="store-badge-btn"
+                data-testid="forparents-download-android"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                  alt="Get it on Google Play" 
+                />
+              </a>
+              <a 
+                href="https://apps.apple.com/app/zestdo-parent/id123456789" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="store-badge-btn"
+                data-testid="forparents-download-ios"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                  alt="Download on the App Store" 
+                />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section-padding bg-light">
         <div className="container">

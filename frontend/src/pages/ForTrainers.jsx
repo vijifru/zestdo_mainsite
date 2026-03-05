@@ -219,8 +219,79 @@ const ForTrainers = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* App Download Section */}
       <section className="section-padding">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="section-header"
+          >
+            <h2 className="heading-large text-center">Download the Trainer App</h2>
+            <p className="body-large text-center text-secondary">
+              Manage your classes, track earnings, and connect with parents on the go
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="app-download-card trainer-app"
+          >
+            <div className="app-download-features">
+              <div className="app-feature-item">
+                <span className="app-feature-check">✓</span>
+                <span>Manage class schedules easily</span>
+              </div>
+              <div className="app-feature-item">
+                <span className="app-feature-check">✓</span>
+                <span>Track attendance & earnings</span>
+              </div>
+              <div className="app-feature-item">
+                <span className="app-feature-check">✓</span>
+                <span>Communicate with parents</span>
+              </div>
+              <div className="app-feature-item">
+                <span className="app-feature-check">✓</span>
+                <span>Receive instant notifications</span>
+              </div>
+            </div>
+            <div className="app-download-buttons">
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.zestdo.trainer" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="store-badge-btn"
+                data-testid="fortrainers-download-android"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                  alt="Get it on Google Play" 
+                />
+              </a>
+              <a 
+                href="https://apps.apple.com/app/zestdo-trainer/id987654321" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="store-badge-btn"
+                data-testid="fortrainers-download-ios"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                  alt="Download on the App Store" 
+                />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding bg-light">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
