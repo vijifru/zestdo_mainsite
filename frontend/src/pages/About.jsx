@@ -260,8 +260,7 @@ const About = () => {
           
         
       </section>
-
-    
+    </>
   );
 };
 
