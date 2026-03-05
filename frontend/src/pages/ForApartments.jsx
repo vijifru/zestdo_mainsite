@@ -232,11 +232,9 @@ const ForApartments = () => {
                     <span className="body-standard">{result}</span>
                   </motion.div>
                 ))}
-
-
+              </div>
+            </div>
           </motion.div>
-
-          </div>
         </div>
       </section>
 
