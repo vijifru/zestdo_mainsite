@@ -1,0 +1,27 @@
+/**
+ * Validation Middleware
+ */
+
+const { validationResult } = require('express-validator');
+const { validationError } = require('../utils/response');
+
+/**
+ * Validate request using express-validator
+ */
+const validate = (req, res, next) => {
+  const errors = validationResult(req);
+  
+  if (!errors.isEmpty()) {
+    const formattedErrors = errors.array().map(err => ({
+      field: err.path,
+      message: err.msg
+    }));
+    return validationError(res, formattedErrors);
+  }
+  
+  next();
+};
+
+module.exports = {
+  validate
+};
