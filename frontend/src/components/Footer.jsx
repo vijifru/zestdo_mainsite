@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Twitter, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -31,30 +32,27 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="footer-heading">For Parents</h4>
             <ul className="footer-links">
-              <li><a href="#" className="body-standard">Browse Activities</a></li>
-              <li><a href="#" className="body-standard">Find Classes</a></li>
-              <li><a href="#" className="body-standard">Subscription Plans</a></li>
-              <li><a href="#" className="body-standard">Parent Guide</a></li>
+              <li><Link to="/for-parents" className="body-standard">Browse Activities</Link></li>
+              <li><Link to="/for-parents#plans" className="body-standard">Subscription Plans</Link></li>
+              <li><Link to="/contact" className="body-standard">Parent Guide</Link></li>
             </ul>
           </div>
           
           <div className="footer-column">
             <h4 className="footer-heading">For Trainers</h4>
             <ul className="footer-links">
-              <li><a href="#" className="body-standard">Become a Trainer</a></li>
-              <li><a href="#" className="body-standard">Trainer Dashboard</a></li>
-              <li><a href="#" className="body-standard">Resources</a></li>
-              <li><a href="#" className="body-standard">Success Stories</a></li>
+              <li><Link to="/for-trainers" className="body-standard">Become a Trainer</Link></li>
+              <li><Link to="/for-trainers#requirements" className="body-standard">Requirements</Link></li>
+              <li><Link to="/contact" className="body-standard">Resources</Link></li>
             </ul>
           </div>
           
           <div className="footer-column">
             <h4 className="footer-heading">For Apartments</h4>
             <ul className="footer-links">
-              <li><a href="#" className="body-standard">Partner With Us</a></li>
-              <li><a href="#" className="body-standard">Revenue Model</a></li>
-              <li><a href="#" className="body-standard">Case Studies</a></li>
-              <li><a href="#" className="body-standard">Admin Portal</a></li>
+              <li><Link to="/for-apartments" className="body-standard">Partner With Us</Link></li>
+              <li><Link to="/for-apartments#revenue" className="body-standard">Revenue Model</Link></li>
+              <li><Link to="/for-apartments#case-study" className="body-standard">Case Studies</Link></li>
             </ul>
           </div>
           
@@ -82,11 +80,11 @@ const Footer = () => {
             © 2025 ZestDo. All rights reserved.
           </p>
           <div className="footer-legal">
-            <a href="#" className="body-small text-secondary">Privacy Policy</a>
+            <Link to="/privacy-policy" className="body-small text-secondary">Privacy Policy</Link>
             <span className="legal-divider">•</span>
-            <a href="#" className="body-small text-secondary">Terms of Service</a>
+            <Link to="/terms-of-service" className="body-small text-secondary">Terms of Service</Link>
             <span className="legal-divider">•</span>
-            <a href="#" className="body-small text-secondary">Refund Policy</a>
+            <Link to="/contact" className="body-small text-secondary">Refund Policy</Link>
           </div>
         </div>
       </div>

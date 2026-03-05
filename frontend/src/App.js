@@ -1,31 +1,30 @@
 import React from "react";
 import "@/App.css";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import HowItWorks from "@/components/HowItWorks";
-import Activities from "@/components/Activities";
-import WhyZestDo from "@/components/WhyZestDo";
-import FeaturedCommunities from "@/components/FeaturedCommunities";
-import AppShowcase from "@/components/AppShowcase";
-import Testimonials from "@/components/Testimonials";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "@/pages/Home";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+import ForParents from "@/pages/ForParents";
+import ForTrainers from "@/pages/ForTrainers";
+import ForApartments from "@/pages/ForApartments";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main>
-        <Hero />
-        <HowItWorks />
-        <Activities />
-        <WhyZestDo />
-        <FeaturedCommunities />
-        <AppShowcase />
-        <Testimonials />
-        <CTASection />
-      </main>
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/for-parents" element={<ForParents />} />
+          <Route path="/for-trainers" element={<ForTrainers />} />
+          <Route path="/for-apartments" element={<ForApartments />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
