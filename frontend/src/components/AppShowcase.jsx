@@ -1,10 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Check, Star } from 'lucide-react';
-import { subscriptionPlans } from '../data/mock';
+import { getSubscriptionPlans } from '../services/api';
 import { Button } from './ui/button';
 
 const AppShowcase = () => {
+  const [subscriptionPlans, setSubscriptionPlans] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPlans = async () => {
+      try {
+        const data = await getSubscriptionPlans();
+        setSubscriptionPlans(data);
+      } catch (error) {
+        console.error('Error fetching subscription plans:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchPlans();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="section-padding">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="heading-large text-center">Choose Your Plan</h2>
+            <p className="body-large text-center text-secondary">Loading...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="section-padding">
       <div className="container">
@@ -30,6 +60,7 @@ const AppShowcase = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`plan-card ${plan.popular ? 'popular-plan' : ''}`}
+              data-testid={`plan-card-${plan.id}`}
             >
               {plan.popular && (
                 <div className="popular-badge">
