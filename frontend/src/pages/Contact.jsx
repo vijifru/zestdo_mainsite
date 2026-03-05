@@ -232,15 +232,9 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                {contactForm.error && (
-                  <div className="form-status error" data-testid="form-status">
-                    {contactForm.error}
-                  </div>
-                )}
-
-                {contactForm.success && (
-                  <div className="form-status success" data-testid="form-status">
-                    Message sent successfully! We'll get back to you soon.
+                {(contactForm.success || contactForm.error) && (
+                  <div className={`form-status ${contactForm.success ? 'success' : 'error'}`} data-testid="form-status">
+                    {contactForm.success ? contactForm.message : contactForm.error}
                   </div>
                 )}
 
