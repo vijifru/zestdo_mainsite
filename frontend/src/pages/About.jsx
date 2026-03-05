@@ -165,14 +165,14 @@ const About = () => {
                 >
                   <div className="value-icon">
                     <IconComponent size={32} />
-                  
+                  </div>
                   <h3 className="heading-medium">{value.title}</h3>
                   <p className="body-standard text-secondary">{value.description}</p>
                 </motion.div>
               );
             })}
-          
-        
+          </div>
+        </div>
       </section>
 
       {/* Team Section */}
@@ -203,14 +203,14 @@ const About = () => {
               >
                 <div className="team-avatar">
                   {member.name.charAt(0)}
-                
+                </div>
                 <h3 className="heading-medium">{member.name}</h3>
                 <p className="body-standard team-role">{member.role}</p>
                 <p className="body-standard text-secondary">{member.description}</p>
               </motion.div>
             ))}
-          
-        
+          </div>
+        </div>
       </section>
 
       {/* Stats Section */}
@@ -224,8 +224,8 @@ const About = () => {
               transition={{ duration: 0.5 }}
               className="stat-large"
             >
-              <div className="stat-number-large">50+
-              <div className="stat-label-large">Partner Apartments
+              <div className="stat-number-large">50+</div>
+              <div className="stat-label-large">Partner Apartments</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -234,8 +234,8 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="stat-large"
             >
-              <div className="stat-number-large">100+
-              <div className="stat-label-large">Verified Trainers
+              <div className="stat-number-large">100+</div>
+              <div className="stat-label-large">Verified Trainers</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -244,8 +244,8 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="stat-large"
             >
-              <div className="stat-number-large">2000+
-              <div className="stat-label-large">Happy Children
+              <div className="stat-number-large">2000+</div>
+              <div className="stat-label-large">Happy Children</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -254,11 +254,11 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="stat-large"
             >
-              <div className="stat-number-large">8+
-              <div className="stat-label-large">Activity Categories
+              <div className="stat-number-large">8+</div>
+              <div className="stat-label-large">Activity Categories</div>
             </motion.div>
-          
-        
+          </div>
+        </div>
       </section>
     </>
   );

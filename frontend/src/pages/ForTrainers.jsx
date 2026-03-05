@@ -104,8 +104,6 @@ const ForTrainers = () => {
                 </motion.div>
               );
             })}
-
-
           </div>
         </div>
       </section>
@@ -146,8 +144,6 @@ const ForTrainers = () => {
                 alt="Trainer teaching"
               />
             </motion.div>
-
-
           </div>
         </div>
       </section>
@@ -191,8 +187,6 @@ const ForTrainers = () => {
                 </div>
               </motion.div>
             ))}
-
-
           </div>
         </div>
       </section>

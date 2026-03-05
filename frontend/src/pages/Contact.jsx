@@ -67,46 +67,46 @@ const Contact = () => {
                 <div className="contact-item">
                   <div className="contact-item-icon">
                     <MapPin size={24} />
-
+                  </div>
                   <div className="contact-item-content">
                     <h4 className="body-large font-medium">Address</h4>
                     <p className="body-standard text-secondary">
                       Koramangala, Bengaluru<br />
                       Karnataka 560034, India
                     </p>
-
-
+                  </div>
+                </div>
 
                 <div className="contact-item">
                   <div className="contact-item-icon">
                     <Mail size={24} />
-
+                  </div>
                   <div className="contact-item-content">
                     <h4 className="body-large font-medium">Email</h4>
                     <p className="body-standard text-secondary">
                       hello@zestdo.com<br />
                       support@zestdo.com
                     </p>
-
-
+                  </div>
+                </div>
 
                 <div className="contact-item">
                   <div className="contact-item-icon">
                     <Phone size={24} />
-
+                  </div>
                   <div className="contact-item-content">
                     <h4 className="body-large font-medium">Phone</h4>
                     <p className="body-standard text-secondary">
                       +91 98765 43210<br />
                       Mon-Sat: 9 AM - 7 PM
                     </p>
-
-
+                  </div>
+                </div>
 
                 <div className="contact-item">
                   <div className="contact-item-icon">
                     <Clock size={24} />
-
+                  </div>
                   <div className="contact-item-content">
                     <h4 className="body-large font-medium">Working Hours</h4>
                     <p className="body-standard text-secondary">
@@ -139,7 +139,7 @@ const Contact = () => {
                     required
                     placeholder="Enter your full name"
                   />
-
+                </div>
 
                 <div className="form-row">
                   <div className="form-group">
@@ -154,7 +154,7 @@ const Contact = () => {
                       required
                       placeholder="your@email.com"
                     />
-
+                  </div>
 
                   <div className="form-group">
                     <label htmlFor="phone" className="form-label">Phone Number</label>
@@ -167,8 +167,8 @@ const Contact = () => {
                       className="form-input"
                       placeholder="+91 98765 43210"
                     />
-
-
+                  </div>
+                </div>
 
                 <div className="form-group">
                   <label htmlFor="userType" className="form-label">I am a *</label>
@@ -185,7 +185,7 @@ const Contact = () => {
                     <option value="apartment">Apartment Admin</option>
                     <option value="other">Other</option>
                   </select>
-
+                </div>
 
                 <div className="form-group">
                   <label htmlFor="subject" className="form-label">Subject *</label>
@@ -199,7 +199,7 @@ const Contact = () => {
                     required
                     placeholder="How can we help you?"
                   />
-
+                </div>
 
                 <div className="form-group">
                   <label htmlFor="message" className="form-label">Message *</label>
@@ -213,7 +213,7 @@ const Contact = () => {
                     rows="5"
                     placeholder="Tell us more about your inquiry..."
                   ></textarea>
-
+                </div>
 
                 <Button type="submit" className="btn-primary w-full">
                   <Send size={20} className="mr-2" />
@@ -221,8 +221,6 @@ const Contact = () => {
                 </Button>
               </form>
             </motion.div>
-
-
           </div>
         </div>
       </section>
@@ -279,6 +277,7 @@ const Contact = () => {
               <p className="body-standard text-secondary">Partner with us to activate your amenities</p>
               <Button className="btn-secondary mt-4">Learn More</Button>
             </motion.div>
+          </div>
         </div>
       </section>
     </>

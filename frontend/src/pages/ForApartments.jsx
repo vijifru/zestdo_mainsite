@@ -108,8 +108,6 @@ const ForApartments = () => {
                 </motion.div>
               );
             })}
-
-
           </div>
         </div>
       </section>
@@ -274,8 +272,6 @@ const ForApartments = () => {
                 <p className="body-standard text-secondary">{item.desc}</p>
               </motion.div>
             ))}
-
-
           </div>
         </div>
       </section>

@@ -118,8 +118,6 @@ const ForParents = () => {
                 </motion.div>
               );
             })}
-
-
           </div>
         </div>
       </section>
@@ -155,8 +153,6 @@ const ForParents = () => {
                 <p className="body-standard text-secondary">{item.description}</p>
               </motion.div>
             ))}
-
-
           </div>
         </div>
       </section>
