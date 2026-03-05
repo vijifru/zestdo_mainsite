@@ -2,8 +2,7 @@ import React from 'react';
 
 const TermsOfService = () => {
   return (
-    
-      
+    <>
       <section className="legal-page">
         <div className="container-narrow">
           <h1 className="display-hero">Terms of Service</h1>
@@ -196,8 +195,7 @@ const TermsOfService = () => {
           
         
       </section>
-
-    
+    </>
   );
 };
 

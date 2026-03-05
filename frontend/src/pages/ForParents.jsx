@@ -61,8 +61,7 @@ const ForParents = () => {
   ];
 
   return (
-    
-      
+    <>
       {/* Hero Section */}
       <section className="page-hero parents-hero">
         <div className="container">
@@ -221,8 +220,7 @@ const ForParents = () => {
           </motion.div>
         
       </section>
-
-    
+    </>
   );
 };
 

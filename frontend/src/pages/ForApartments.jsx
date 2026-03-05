@@ -51,8 +51,7 @@ const ForApartments = () => {
   };
 
   return (
-    
-      
+    <>
       {/* Hero Section */}
       <section className="page-hero apartments-hero">
         <div className="container">
@@ -330,8 +329,7 @@ const ForApartments = () => {
           </motion.div>
         
       </section>
-
-    
+    </>
   );
 };
 

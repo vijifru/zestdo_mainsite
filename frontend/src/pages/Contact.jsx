@@ -28,8 +28,7 @@ const Contact = () => {
   };
 
   return (
-    
-      
+    <>
       {/* Hero Section */}
       <section className="page-hero contact-hero">
         <div className="container">
@@ -281,8 +280,7 @@ const Contact = () => {
           
         
       </section>
-
-    
+    </>
   );
 };
 

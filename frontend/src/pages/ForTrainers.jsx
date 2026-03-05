@@ -47,8 +47,7 @@ const ForTrainers = () => {
   ];
 
   return (
-    
-      
+    <>
       {/* Hero Section */}
       <section className="page-hero trainers-hero">
         <div className="container">
@@ -245,8 +244,7 @@ const ForTrainers = () => {
           </motion.div>
         
       </section>
-
-    
+    </>
   );
 };
 

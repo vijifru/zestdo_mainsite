@@ -2,8 +2,7 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
   return (
-    
-      
+    <>
       <section className="legal-page">
         <div className="container-narrow">
           <h1 className="display-hero">Privacy Policy</h1>
@@ -144,8 +143,7 @@ const PrivacyPolicy = () => {
           
         
       </section>
-
-    
+    </>
   );
 };
 
