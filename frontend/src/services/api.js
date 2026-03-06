@@ -134,7 +134,7 @@ export const submitApartmentInquiry = async (data) => {
 
 export const fetchPosters = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/posters');
+    const response = await api.get('/posters');
     return response.data;
   } catch (error) {
     console.error('Error fetching posters:', error);
@@ -144,7 +144,7 @@ export const fetchPosters = async () => {
 
 export const fetchPosterById = async (posterId) => {
   try {
-    const response = await axios.get(`http://127.0.0.1:8000/api/posters/${posterId}`);
+    const response = await api.get(`/posters/${posterId}`);
     return response.data;
   } catch (error) {
     console.error('Error fetching poster:', error);
