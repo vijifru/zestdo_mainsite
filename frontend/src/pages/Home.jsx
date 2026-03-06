@@ -10,16 +10,20 @@ import FeaturedCommunities from '../components/FeaturedCommunities';
 import AppShowcase from '../components/AppShowcase';
 import Testimonials from '../components/Testimonials';
 import CTASection from '../components/CTASection';
+import SummerCampSection from '../components/SummerCampSection';
+import AppDownloadSection from '../components/AppDownloadSection';  // <- Add this
 
 const Home = () => {
   return (
     <main>
       <Hero />
       <HowItWorks />
+      <SummerCampSection />
       <Activities />
       <WhyZestDo />
       <FeaturedCommunities />
       <AppShowcase />
+      {/* <AppDownloadSection /> */}
       <Testimonials />
       <CTASection />
     </main>

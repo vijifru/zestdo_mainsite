@@ -2,14 +2,23 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
+import AppDownloadModal from './AppDownloadModal';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showAppModal, setShowAppModal] = useState(false);
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
 
+    const handleGetStarted = () => {
+    setShowAppModal(true);
+    setIsMenuOpen(false);
+  };
+
   return (
+    <>
     <header className="header">
       <div className="container">
         <nav className="nav">
@@ -18,6 +27,12 @@ const Header = () => {
           </Link>
           
           <div className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
+            <Link 
+              to="/" 
+              className={`nav-link body-standard ${isActive('/') ? 'nav-link-active' : ''}`}
+            >
+              Home
+            </Link>
             <Link 
               to="/for-parents" 
               className={`nav-link body-standard ${isActive('/for-parents') ? 'nav-link-active' : ''}`}
@@ -49,10 +64,12 @@ const Header = () => {
               Contact
             </Link>
             <div className="nav-buttons">
-              <Button variant="ghost" className="btn-secondary-small">
+              {/* <Button variant="ghost" className="btn-secondary-small">
                 Login
-              </Button>
-              <Button className="btn-primary-small">
+              </Button> */}
+              <Button className="btn-primary-small"
+              onClick={handleGetStarted}
+              >
                 Get Started
               </Button>
             </div>
@@ -68,6 +85,12 @@ const Header = () => {
         </nav>
       </div>
     </header>
+    {/* App Download Modal */}
+      <AppDownloadModal 
+        isOpen={showAppModal} 
+        onClose={() => setShowAppModal(false)} 
+      />
+      </>
   );
 };
 

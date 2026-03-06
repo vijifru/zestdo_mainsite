@@ -145,7 +145,7 @@ const Footer = () => {
               </li>
               <li className="body-standard">
                 <Phone size={16} />
-                <span>+91 98765 43210</span>
+                <span>+91 8970007983 & +91 8970007984</span>
               </li>
             </ul>
           </div>

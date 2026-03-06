@@ -238,3 +238,19 @@ async def submit_apartment(data: dict):
     }
     add_to_collection("apartmentInquiries", inquiry)
     return {"success": True, "message": "Thank you for your interest!", "inquiry": inquiry}
+
+# ============================================
+# Posters Routes
+# ============================================
+
+@app.get("/api/posters")
+async def get_posters():
+    return get_collection("posters")
+
+@app.get("/api/posters/{id}")
+async def get_poster(id: int):
+    posters = get_collection("posters")
+    for a in posters:
+        if a["id"] == id:
+            return a
+    raise HTTPException(404, "posters not found")

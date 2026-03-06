@@ -241,5 +241,156 @@
     "trainers": 100,
     "happyKids": 2000,
     "activityCategories": 8
+  },
+  "posters":[
+  {
+    "id": 1,
+    "title": "Summer Camp 2024",
+    "description": "Join us for an unforgettable summer experience with sports, arts, and outdoor activities. Perfect for kids aged 6-12.",
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop&q=80",
+    "startDate": "June 15, 2024",
+    "endDate": "August 30, 2024",
+    "location": "Community Center Park",
+    "ageGroup": "6-12 years",
+    "requirements": "Swimming ability preferred for water activities",
+    "highlights": [
+      "Daily sports activities",
+      "Arts and crafts sessions",
+      "Outdoor games and team building",
+      "Healthy snacks provided",
+      "Certified instructors"
+    ],
+    "rewards": {
+      "certificate": true,
+      "certificateDescription": "Official completion certificate recognizing achievement",
+      "gift": true,
+      "giftDescription": "Exclusive summer camp merchandise and memorabilia"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Sports Academy",
+    "description": "Professional coaching in basketball, football, tennis, and swimming with certified trainers.",
+    "imageUrl": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&h=800&fit=crop&q=80",
+    "startDate": "July 1, 2024",
+    "endDate": "August 15, 2024",
+    "location": "Central Sports Complex",
+    "ageGroup": "8-16 years",
+    "level": "Beginner to Advanced",
+    "requirements": "Basic fitness level required",
+    "highlights": [
+      "Professional coaching",
+      "Multiple sport options",
+      "Tournaments and competitions",
+      "Equipment provided",
+      "Performance tracking"
+    ],
+    "rewards": {
+      "certificate": true,
+      "certificateDescription": "Sports excellence certificate with performance level",
+      "gift": true,
+      "giftDescription": "Sports academy branded merchandise and award"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Arts & Creativity",
+    "description": "Explore painting, music, dance, and theater with expert instructors.",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1200&h=800&fit=crop&q=80",
+    "startDate": "June 20, 2024",
+    "endDate": "August 10, 2024",
+    "location": "Arts Center",
+    "ageGroup": "5-14 years",
+    "level": "All levels welcome",
+    "requirements": "No prior experience needed",
+    "highlights": [
+      "Multiple art forms",
+      "Expert instructors",
+      "Materials provided",
+      "Final showcase performance",
+      "Creative expression focus"
+    ],
+    "rewards": {
+      "certificate": true,
+      "certificateDescription": "Art & Creativity completion certificate",
+      "gift": true,
+      "giftDescription": "Art supplies kit and certificate of participation"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Music & Performance",
+    "description": "Learn instruments, vocals, and stage performance from experienced musicians.",
+    "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&h=800&fit=crop&q=80",
+    "startDate": "July 10, 2024",
+    "endDate": "August 25, 2024",
+    "location": "Music Hall Studio",
+    "ageGroup": "7-15 years",
+    "level": "Beginner to Intermediate",
+    "requirements": "Instrument provided",
+    "highlights": [
+      "Instrument training",
+      "Vocal coaching",
+      "Stage performance skills",
+      "Group performances",
+      "Music theory basics"
+    ],
+    "rewards": {
+      "certificate": true,
+      "certificateDescription": "Music performance certificate",
+      "gift": true,
+      "giftDescription": "Personalized music notebook and branded merchandise"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Outdoor Adventure",
+    "description": "Hiking, camping, rock climbing, and nature exploration activities.",
+    "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop&q=80",
+    "startDate": "June 25, 2024",
+    "endDate": "August 20, 2024",
+    "location": "Mountain Trail Base",
+    "ageGroup": "10-16 years",
+    "level": "Moderate difficulty",
+    "requirements": "Moderate fitness level",
+    "highlights": [
+      "Hiking and trekking",
+      "Camping skills",
+      "Rock climbing basics",
+      "Nature conservation",
+      "Safety training included"
+    ],
+    "rewards": {
+      "certificate": true,
+      "certificateDescription": "Adventure completion certificate with skills achieved",
+      "gift": true,
+      "giftDescription": "Adventure gear bundle and hiking merchandise"
+    }
+  },
+  {
+    "id": 6,
+    "title": "STEM & Robotics",
+    "description": "Learn coding, robotics, and engineering with hands-on projects.",
+    "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=800&fit=crop&q=80",
+    "startDate": "July 5, 2024",
+    "endDate": "August 30, 2024",
+    "location": "Tech Innovation Lab",
+    "ageGroup": "9-16 years",
+    "level": "Beginner to Advanced",
+    "requirements": "Basic computer skills",
+    "highlights": [
+      "Coding fundamentals",
+      "Robotics projects",
+      "Engineering challenges",
+      "Team-based learning",
+      "Innovation focus"
+    ],
+    "rewards": {
+      "certificate": true,
+      "certificateDescription": "STEM & Robotics certification with specialization",
+      "gift": true,
+      "giftDescription": "Tech gadget and STEM academy branded merchandise"
+    }
   }
+]
 }
